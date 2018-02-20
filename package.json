@@ -1,0 +1,18 @@
+{
+  "name": "mocha-froth",
+  "version": "0.0.0",
+  "description": "Fuzzer for mocha testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fuzz",
+    "fuzzer",
+    "mocha",
+    "test",
+    "random"
+  ],
+  "author": "Keith Irwin <mocha-froth@keithirwin.us> (https://keithirwin.us)",
+  "license": "GPL-3.0"
+}
