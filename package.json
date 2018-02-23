@@ -1,6 +1,6 @@
 {
   "name": "mocha-froth",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Fuzzer for mocha testing",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,10 @@
     "test",
     "random"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keith24/mocha-froth"
+  },
   "author": "Keith Irwin <mocha-froth@keithirwin.us> (https://keithirwin.us)",
   "license": "GPL-3.0"
 }
