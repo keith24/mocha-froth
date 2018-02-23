@@ -20,9 +20,10 @@ const froth = require('mocha-froth')
 ```
 
 Use the syntax `froth(num, max, opt)`where:
-*num* is the number of strings generated
-*max* is the maximum string length
-*opt* is an object of options for characters to include
+
+* *num* is the number of strings generated
+* *max* is the maximum string length
+* *opt* is an object of options for characters to include
 
 ```javascript
 opt = {
@@ -37,7 +38,7 @@ opt = {
 }
 ```
 
-## Examples
+### Examples
 
 Create ten random strings, each up to twenty characters (default): 
 
