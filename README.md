@@ -27,13 +27,13 @@ Use the syntax `froth(num, max, opt)`where:
 ```javascript
 opt = {
 	// Set to true to include tests with...
-  none: true, // Empty string
-  whitespace: true, // Various whitespace chars
-  quotes: true, // Combinations of quotes
-  backslashing: true, // Combinations of backslashes
-  symbols: true, // Various symbols
-  foreign: true, // Foreign chars
-  alphanumeric: true, // Ordinary letters and numbers
+	none: true, // Empty string
+	whitespace: true, // Various whitespace chars
+	quotes: true, // Combinations of quotes
+	backslashing: true, // Combinations of backslashes
+	symbols: true, // Various symbols
+	foreign: true, // Foreign chars
+	alphanumeric: true, // Ordinary letters and numbers
 }
 ```
 
