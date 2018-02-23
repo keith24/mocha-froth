@@ -1,11 +1,13 @@
-const crypto = require('crypto')
+'use strict'
 
-/* froth
- * num: number of test strings to return
- * max: maximum length of test string
- * opt: options object
+/**
+ * Returns an array of random strings for fuzzing
+ * @param {number} num: number of test strings to return
+ * @param {number} max: maximum length of test string
+ * @param {object} opt: options
+ * @return {array}
  */
-exports.froth = function(num, max, opt={
+module.exports = function(num=10, max=20, opt={
   // Set to true to include tests with...
   none: true, // Empty string
   whitespace: true, // Various whitespace chars
@@ -16,10 +18,11 @@ exports.froth = function(num, max, opt={
   alphanumeric: true, // Ordinary letters and numbers
 } ){
   
-  let (chars,tests) = []
+  let chars = []
+  let tests = []
   
   // Whitespace characters
-  if (opt.whitespace) chars.concat([
+  if (opt.whitespace!==false) chars = chars.concat([
     ' ', // Space
     '  ', // Tab
     '\n', // Newline
@@ -28,45 +31,45 @@ exports.froth = function(num, max, opt={
   ])
   
   // Quotation characters
-  if (opt.quotes) chars.concat([
+  if (opt.quotes!==false) chars = chars.concat([
     '\'', '\'\'', '\'\'\'', // Single quotes
     '"', '""', '"""', // Double quotes
     '`', '``', '```', // Backticks
   ])
   
   // Backslashes
-  if (opt.backslashing) chars.concat([
+  if (opt.backslashing!==false) chars = chars.concat([
     '\\', '\\\\',
   ])
   
   // Symbols
-  if (opt.symbols) chars.concat(
-    '°~!@#$%€^&*()-_─=+[]{}|;:,./<>?¿¹²³¼½¬ł€¶ŧ←↓→»«¢„“”·…–'.split('')
+  if (opt.symbols!==false) chars = chars.concat(
+    '°~!@#$%€^&*()-_─=+[]{}|;:,./<>?¿¹²³¼½¬€¶←↓→»«¢„“”·…–'.split('')
   )
   
   // Foreign characters
-  if (opt.foreign) chars.concat(
-    'ßöäüñáóíúýéâêîôûŷàèìòùảẻỉỏỷÿïøþłĸŋđðſæµёйцукенгшщзхъэждлорпавыфячсмитьбюЁЙЦУКЕНГШЩЗХЪЭЖДЛОРПАВЫФЯЧСМИТЬБЮ'.split('')
+  if (opt.foreign!==false) chars = chars.concat(
+    'ŧłßöäüñáóíúýéâêîôûŷàèìòùảẻỉỏỷÿïøþłĸŋđðſæµёйцукенгшщзхъэждлорпавыфячсмитьбюЁЙЦУКЕНГШЩЗХЪЭЖДЛОРПАВЫФЯЧСМИТЬБЮ'.split('')
   )
   
   // Ordinary letters and numbers
-  if (opt.alphanumeric) chars.concat(
+  if (opt.alphanumeric!==false) chars = chars.concat(
     'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'.split(''),
   )
   
-  const min = (none)? 0 : 1
+  const min = (opt.none!==false)? 0 : 1
   
   // Add tests until we have enough tests
   for (let n=0; n<num; n++) {
     // Pick a random number from min to max
-    len = Math.floor(Math.random() * (max - min + 1)) + min
+    const len = Math.floor(Math.random() * (max - min + 1)) + min
     // Create a string of that length
     let s = ''
     for (let l=0; l<len; l++) {
       s += chars[Math.floor(Math.random()*chars.length)]
     }
-    // Add that string to the tests
-    tests.push(s)
+    // Add that string to the tests if not already
+    if (!tests.includes(s)) tests.push(s)
   }
   
   return tests
