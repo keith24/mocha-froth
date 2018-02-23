@@ -1,5 +1,5 @@
 # mocha-froth
-###### v0.0.0
+###### v0.1.0
 [Keith Irwin](https://keithirwin.us/)
 
 Fuzzer for mocha testing.  Or any javascript testing suite, really.  This package provides a function that returns an array of random strings.  You know, a [fuzzer](https://en.wikipedia.org/wiki/Fuzzer).  
