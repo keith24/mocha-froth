@@ -59,3 +59,9 @@ Same as above, but without foreign characters:
 console.log( froth(5,10,{foreign:false}) )
 // [ 'VP"""t¬mK²', '²L6)>\r\nV', 'v,→“', '*e8', '→' ]
 ```
+
+## Testing
+
+```sh
+npm test
+```
