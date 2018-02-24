@@ -1,11 +1,9 @@
 # mocha-froth
-###### v0.2.2
-[Keith Irwin](https://keithirwin.us/)
-
 [![Build Status](https://travis-ci.org/keith24/mocha-froth.svg?branch=master)](https://travis-ci.org/keith24/mocha-froth)
 [![Coverage Status](https://coveralls.io/repos/github/keith24/mocha-froth/badge.svg?branch=master)](https://coveralls.io/github/keith24/mocha-froth?branch=master)
 
 Fuzzer for mocha testing.  Or any javascript testing suite, really.  This package provides a function that returns an array of random strings.  You know, a [fuzzer](https://en.wikipedia.org/wiki/Fuzzer).  
+
 
 ## Installation
 
@@ -41,6 +39,9 @@ opt = {
 }
 ```
 
+mocha-froth will return an array of strings you can use to test your code.  
+
+
 ### Examples
 
 Create ten random strings, each up to twenty characters (default): 
@@ -58,10 +59,12 @@ console.log( froth(5,10) )
 ```
 
 Same as above, but without foreign characters: 
+
 ```javascript
 console.log( froth(5,10,{foreign:false}) )
 // [ 'VP"""t¬mK²', '²L6)>\r\nV', 'v,→“', '*e8', '→' ]
 ```
+
 
 ## Testing
 
