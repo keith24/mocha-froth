@@ -3,6 +3,7 @@
 [Keith Irwin](https://keithirwin.us/)
 
 [![Build Status](https://travis-ci.org/keith24/mocha-froth.svg?branch=master)](https://travis-ci.org/keith24/mocha-froth)
+[![Coverage Status](https://coveralls.io/repos/github/keith24/mocha-froth/badge.svg?branch=master)](https://coveralls.io/github/keith24/mocha-froth?branch=master)
 
 Fuzzer for mocha testing.  Or any javascript testing suite, really.  This package provides a function that returns an array of random strings.  You know, a [fuzzer](https://en.wikipedia.org/wiki/Fuzzer).  
 
