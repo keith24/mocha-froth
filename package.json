@@ -4,8 +4,8 @@
   "description": "Fuzzer for mocha testing",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec",
-    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test.js"
+    "test": "node_modules/mocha/bin/_mocha",
+    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- test.js"
   },
   "keywords": [
     "fuzz",
