@@ -1,6 +1,6 @@
 # mocha-froth
 
-[![npm version](https://badge.fury.io/js/mocha-froth.svg)](https://badge.fury.io/js/mocha-froth)
+[![npm version](https://badge.fury.io/js/mocha-froth.svg)](https://www.npmjs.com/package/mocha-froth)
 [![Travis Build Status](https://travis-ci.org/keith24/mocha-froth.svg?branch=master)](https://travis-ci.org/keith24/mocha-froth)
 [![Coverage Status](https://coveralls.io/repos/github/keith24/mocha-froth/badge.svg?branch=master)](https://coveralls.io/github/keith24/mocha-froth?branch=master)
 [![Snyk Vulnerabilities](https://snyk.io/test/github/keith24/mocha-froth/badge.svg?targetFile=package.json)](https://snyk.io/test/github/keith24/mocha-froth?targetFile=package.json)
