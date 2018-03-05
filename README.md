@@ -11,7 +11,7 @@ Fuzzer for mocha testing.  Or any javascript testing suite, really.  This packag
 ## Installation
 
 ```sh
-npm install mocha-froth
+npm install --save-dev mocha-froth
 ```
 
 
