@@ -1,6 +1,6 @@
 {
   "name": "mocha-froth",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Fuzzer for mocha testing",
   "main": "index.js",
   "scripts": {
